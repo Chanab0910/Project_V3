@@ -5,12 +5,12 @@ from code.models import Country, CountryMatch
 
 engine = create_engine('sqlite:///World_cup.sqlite3', echo=True)
 sess = Session(engine)
-conn = sqlite3.connect("../World_cup.sqlite")
+conn = sqlite3.connect('sqlite:///World_cup.sqlite3')
 cursor = conn.cursor()
 
 thing = """
 Select *
-From country
+From Country
 """
 
 cursor.execute(thing)
